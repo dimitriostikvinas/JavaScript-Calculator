@@ -1,0 +1,79 @@
+/* Overall page styling and centering the calculator */
+body, html {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f4f4f4;
+}
+
+#calculator {
+    width: 300px;
+    background-color: #333;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+}
+
+#formulaDisplay, #display {
+    background-color: #222;
+    color: #fff;
+    padding: 10px 20px;
+    font-family: 'Digital', monospace;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    text-align: right;
+    font-size: 1.2rem;
+}
+#formulaDisplay{
+    color: #833c2e;
+    font-size: 1rem;
+}
+
+#display {
+    min-height: 40px;
+}
+
+#calculatorBody {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+button {
+    background-color: #888;
+    border: none;
+    padding: 15px;
+    border-radius: 5px;
+    font-size: 1.5rem;
+    color: white;
+    box-shadow: 0 4px #666;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:active {
+    background-color: #555;
+    box-shadow: 0 2px #666;
+    transform: translateY(2px);
+}
+
+button#clear {
+    grid-column: span 2;
+    background-color: #f44336;
+}
+
+button#zero {
+    grid-column: span 2;
+}
+
+button#equal {
+    grid-column: 4; 
+    grid-row: 4 / 6; 
+}
+
+
+button#divide, button#multiple, button#subtract, button#add, button#equal {
+    background-color: #4CAF50;
+}
